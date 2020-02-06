@@ -6,4 +6,5 @@ public:
     virtual void search(int data)=0;
 
     virtual int max_e() = 0;
+    virtual int min()=0;
 };
