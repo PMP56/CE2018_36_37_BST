@@ -12,12 +12,16 @@ public:
     }
 };
 
-class LinkedBST::public BST{
+class LinkedBST:public BST{
 private:
     Node* root;
 
 public:
+    LinkedBST();
     void add(int data);
+    void add(Node* root,int data);
+    void insert_e(Node* root, Node* newNode);
     void preOrderTraversal();
-    void search(int data);
+    void traverse(Node* root);
+    //void search(int data);
 };
