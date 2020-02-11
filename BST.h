@@ -1,14 +1,19 @@
-class BST
-{
-public:
-    virtual void add(int data)=0;
-    virtual void preOrderTraversal(int element)=0;
-    virtual void search(int data)=0;
-    virtual int max_e() = 0;
-    virtual int min()=0;
-    virtual void preOrderTraversal()=0;
-    //virtual void search(int data)=0;
+#ifndef BINARYTREE_h
+#define BINARYTREE_h
 
-    //virtual int max_e() = 0;
-    //virtual int min()=0;
+
+class BinarySearchTree{
+	public:
+		virtual void add(int data)=0;
+
+		virtual bool search(int data)=0;
+
+        virtual void preordertraversal()=0;
+        virtual void inordertraversal() = 0;
+        virtual void deleteitem(int data) = 0;
+
+		virtual int maximum() = 0;
+		//virtual int minimum() = 0;
+
 };
+#endif
