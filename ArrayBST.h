@@ -1,21 +1,26 @@
+
 #include "BST.h"
 
-#define MAX 100
+#define MAX_SIZE 100
 
 class ArrayBST : public BST
 {
-    private:
-        int arrayTree[MAX];
-        int currentIndex;
-    public:
-        ArrayBST();
-        ~ArrayBST();
-        void add(int data);
-        void preOrderTraversal(int currentIndex);
-        void search(int key);
-        int max_e();
-        int min();
-        int getLeftChild(int currentIndex);
-	    int getRightChild(int currentIndex);
-};
+private:
+    int element[MAX_SIZE];
 
+public:
+    ArrayBST();
+    ~ArrayBST();
+
+    void add(int data);
+    void preOrderTraversal(int currentIndex);
+    void inOrderTraversal(int currentIndex);
+    bool search(int key);
+    int getLeftChild(int currentIndex);
+    int getRightChild(int currentIndex);
+    int min();
+    int max();
+    void deleteKey(int key);
+    int returnIndex(int key);
+    int minNode(int index);
+};
